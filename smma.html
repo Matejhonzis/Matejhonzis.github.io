@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMMA Section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Your existing content -->
+    <div class="upper-panel">
+        <img src="apple.webp" alt="Logo" class="logo">
+        <div class="button-container">
+            <a href="/" class="button">Home</a>
+            <a href="contact" class="button">Contact</a>
+            <a href="smma" class="button">SMMA</a>
+            <a href="digital-dropshipping" class="button">Digital Dropshipping</a>
+            <a href="mindset" class="button">Mindset</a>
+        </div>
+    </div>
+    <!-- Your existing content -->
+
+    <!-- Script to remove .html from the URL -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          if (window.location.pathname.endsWith('.html')) {
+              var newUrl = window.location.pathname.replace('.html', '');
+              window.history.replaceState(null, null, newUrl);
+          }
+      });
+    </script>
+</body>
+</html>
