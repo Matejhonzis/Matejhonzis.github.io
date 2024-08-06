@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindset</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="upper-panel">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="button-container">
+            <a href="index.html" class="button">Home</a>
+            <a href="about.html" class="button">About Us</a>
+            <a href="contact.html" class="button">Contact</a>
+            <a href="smma.html" class="button">SMMA</a>
+            <a href="digital-dropshipping.html" class="button">Digital Dropshipping</a>
+            <a href="mindset.html" class="button">Mindset</a>
+            <a href="ai.html" class="button">AI</a>
+        </div>
+    </div>
+    <div class="title-container">
+        <h1>Mindset</h1>
+        <hr>
+    </div>
+    <div class="text-content">
+        <p>Welcome to the Mindset page! Here, we focus on improving personal and professional growth through mindset techniques and strategies.</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.pathname.endsWith('.html')) {
+                var newUrl = window.location.pathname.replace('.html', '');
+                window.history.replaceState(null, null, newUrl);
+            }
+        });
+    </script>
+</body>
+</html>
