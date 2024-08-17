@@ -32,7 +32,7 @@ body {
     width: 100%;
     padding: 10px 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
@@ -44,13 +44,11 @@ body {
     width: 85px;
     height: 85px;
     border-radius: 50%;
-    margin-right: 20px;
 }
 
 .button-container {
     display: flex;
     gap: 15px; /* Space between buttons */
-    margin-left: auto;
 }
 
 /* Title Container */
@@ -209,18 +207,18 @@ h1 {
 
 .ai-rectangle {
     top: 450px; /* Position below the pricing boxes and ad */
-    left: -280px; /* Adjusted position */
+    left: -200px;
 }
 
 .smma-rectangle {
     top: 0px;
-    left: 1180px; /* Adjusted position */
+    left: 1100px;
     background: linear-gradient(to right, #ee73ee, #0033ff); /* Gradient by default */
 }
 
 .mindset-rectangle {
     top: 450px; /* Position below the pricing boxes and ad */
-    left: 1180px; /* Adjusted position */
+    left: 1100px;
 }
 
 /* Title Text Styling Inside Rectangles */
@@ -278,7 +276,6 @@ h1 {
     border-radius: 5px;
     padding: 10px 20px;
     text-decoration: none;
-    left: -40px;
     font-weight: bold;
     font-size: 1.1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -312,109 +309,89 @@ h1 {
     .title-container {
         margin: 95px auto 15px;
         padding: 20px;
-        max-width: 800px;
-    }
-
-    /* Adjusting Text Content */
-    .text-content {
-        margin: 15px auto;
-        padding: 20px;
-        max-width: 800px;
-    }
-
-    /* Adjusting Price Box Container */
-    .price-box-container {
-        gap: 20px;
-        max-width: 800px;
     }
 
     /* Adjusting Clickable Containers */
     .clickable-container {
-        margin: 0 auto; /* Reset margin */
-        max-width: 1200px;
-        padding: 0 20px; /* Add padding if needed to prevent overflow */
+        max-width: 1200px; /* Ensure maximum width */
     }
 
-    /* Adjusting Clickable Boxes */
     .clickable {
         width: 300px;
         height: 370px;
     }
-
-    /* Adjusting Rectangles */
-    .dropshipping-rectangle {
-        top: -500px; /* Adjust to fit the screen properly */
-        left: -170px; /* Adjusted position */
-        width: 250px;
-        position: absolute;
-    }
-    .ai-rectangle {
-        top: -50px; /* Align with dropshipping-rectangle */
-        left: -170px; /* Adjusted position */
-        width: 250px;
-        position: absolute;
-    }
-    .smma-rectangle {
-        top: -500px; /* Align with other rectangles */
-        left: 1180px; /* Adjusted position */
-        width: 250px;
-        position: absolute;
-    }
-    .mindset-rectangle {
-        top: -50px; /* Adjust vertical position */
-        left: 1180px; /* Adjusted position */
-        width: 250px;
-        position: absolute;
-    }
-
-    /* Adjusting Button Styles */
-    .button {
-        left: -40px; /* Ensure button is within viewport */
-    }
 }
 
-/* Mobile Layout Adjustments */
-@media only screen and (max-width: 767px) {
-    /* Upper Panel Adjustments */
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+    .background-image {
+        left: 0;
+        width: 100vw; /* Full viewport width */
+        height: auto; /* Auto adjust height */
+    }
+
     .upper-panel {
-        display: flex;
-        justify-content: space-between; /* Ensures buttons are on the right */
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+        gap: 10px;
+    }
+
+    .upper-panel .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .button-container {
+        display: block;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .title-container {
+        margin: 95px auto 15px;
+        padding: 20px;
+    }
+
+    .text-content {
         padding: 10px;
     }
 
-    /* Adjust buttons in upper panel */
-    .button-container {
-        margin-left: auto; /* Align buttons to the right of the logo */
-        display: flex;
-        gap: 15px; /* Space between buttons */
+    .price-box-container {
+        flex-direction: column;
+        gap: 15px;
+        margin: 15px auto;
     }
 
-    /* Background Image (kruh.png) adjustment */
-    .background-image {
-        top: 80px; /* Align with upper panel */
-        width: calc(100% - 4px); /* Full width minus 2px on each side */
-        left: 2px; /* 2px from the left */
-        right: 2px; /* 2px from the right */
+    .price-box {
+        width: 100%;
+        max-width: 300px;
     }
 
-    /* Adjust Rectangles to Stack Vertically */
-    .dropshipping-rectangle, 
-    .smma-rectangle, 
-    .ai-rectangle, 
-    .mindset-rectangle {
-        position: relative; /* Stack them naturally */
-        width: 90%; /* Make them responsive, centered */
-        margin: 15px auto; /* Center with 15px gap below */
-        left: 0;
-        top: 0;
-        transform: none; /* Remove any transform */
+    .clickable-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin: 0 auto;
     }
 
-    /* Ensure consistent spacing and appearance */
-    .dropshipping-rectangle + .smma-rectangle,
-    .smma-rectangle + .ai-rectangle,
-    .ai-rectangle + .mindset-rectangle {
-        margin-top: 15px; /* 15px gap between each rectangle */
+    .clickable {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .dropshipping-rectangle, .ai-rectangle, .smma-rectangle, .mindset-rectangle {
+        position: relative;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 300px;
     }
 }
