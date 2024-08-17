@@ -395,4 +395,11 @@ h1 {
         left: 2px; /* 2px from the left */
         right: 2px; /* 2px from the right */
     }
+
+    /* Adjust Rectangles */
+    .dropshipping-rectangle, .smma-rectangle, .ai-rectangle, .mindset-rectangle {
+        position: static; /* Remove absolute positioning */
+        width: 90%; /* Make them responsive */
+        margin: 0 auto 15px; /* Center them with a 15px gap below */
+    }
 }
