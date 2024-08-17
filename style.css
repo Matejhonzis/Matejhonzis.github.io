@@ -374,18 +374,20 @@ h1 {
 }
 
 /* Mobile Layout Adjustments */
-@media (max-width: 767px) {
-    /* Adjust Upper Panel */
+@media only screen and (max-width: 767px) {
+    /* Upper Panel Adjustments */
     .upper-panel {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* Ensures buttons are on the right */
         align-items: center;
         padding: 10px;
     }
 
-    /* Adjust Learn Digital Dropshipping & SMMA Section */
-    .title-container {
-        margin-top: 10px;
+    /* Adjust buttons in upper panel */
+    .button-container {
+        margin-left: auto; /* Align buttons to the right of the logo */
+        display: flex;
+        gap: 15px; /* Space between buttons */
     }
 
     /* Background Image (kruh.png) adjustment */
@@ -396,10 +398,23 @@ h1 {
         right: 2px; /* 2px from the right */
     }
 
-    /* Adjust Rectangles */
-    .dropshipping-rectangle, .smma-rectangle, .ai-rectangle, .mindset-rectangle {
-        position: static; /* Remove absolute positioning */
-        width: 90%; /* Make them responsive */
-        margin: 0 auto 15px; /* Center them with a 15px gap below */
+    /* Adjust Rectangles to Stack Vertically */
+    .dropshipping-rectangle, 
+    .smma-rectangle, 
+    .ai-rectangle, 
+    .mindset-rectangle {
+        position: relative; /* Stack them naturally */
+        width: 90%; /* Make them responsive, centered */
+        margin: 15px auto; /* Center with 15px gap below */
+        left: 0;
+        top: 0;
+        transform: none; /* Remove any transform */
+    }
+
+    /* Ensure consistent spacing and appearance */
+    .dropshipping-rectangle + .smma-rectangle,
+    .smma-rectangle + .ai-rectangle,
+    .ai-rectangle + .mindset-rectangle {
+        margin-top: 15px; /* 15px gap between each rectangle */
     }
 }
