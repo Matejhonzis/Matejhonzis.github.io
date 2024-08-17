@@ -209,18 +209,18 @@ h1 {
 
 .ai-rectangle {
     top: 450px; /* Position below the pricing boxes and ad */
-    left: -200px;
+    left: -280px; /* Adjusted position */
 }
 
 .smma-rectangle {
     top: 0px;
-    left: 1100px;
+    left: 1180px; /* Adjusted position */
     background: linear-gradient(to right, #ee73ee, #0033ff); /* Gradient by default */
 }
 
 .mindset-rectangle {
     top: 450px; /* Position below the pricing boxes and ad */
-    left: 1100px;
+    left: 1180px; /* Adjusted position */
 }
 
 /* Title Text Styling Inside Rectangles */
@@ -344,25 +344,25 @@ h1 {
     /* Adjusting Rectangles */
     .dropshipping-rectangle {
         top: -500px; /* Adjust to fit the screen properly */
-        left: -90px; /* Bring inside viewport */
+        left: -170px; /* Adjusted position */
         width: 250px;
         position: absolute;
     }
     .ai-rectangle {
         top: -50px; /* Align with dropshipping-rectangle */
-        left: -90px; /* Adjust horizontal position */
+        left: -170px; /* Adjusted position */
         width: 250px;
         position: absolute;
     }
     .smma-rectangle {
         top: -500px; /* Align with other rectangles */
-        left: 1040px; /* Bring inside viewport */
+        left: 1180px; /* Adjusted position */
         width: 250px;
         position: absolute;
     }
     .mindset-rectangle {
         top: -50px; /* Adjust vertical position */
-        left: 1040px; /* Bring inside viewport */
+        left: 1180px; /* Adjusted position */
         width: 250px;
         position: absolute;
     }
@@ -373,3 +373,26 @@ h1 {
     }
 }
 
+/* Mobile Layout Adjustments */
+@media (max-width: 767px) {
+    /* Adjust Upper Panel */
+    .upper-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Adjust Learn Digital Dropshipping & SMMA Section */
+    .title-container {
+        margin-top: 10px;
+    }
+
+    /* Background Image (kruh.png) adjustment */
+    .background-image {
+        top: 80px; /* Align with upper panel */
+        width: calc(100% - 4px); /* Full width minus 2px on each side */
+        left: 2px; /* 2px from the left */
+        right: 2px; /* 2px from the right */
+    }
+}
