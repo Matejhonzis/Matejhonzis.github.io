@@ -32,7 +32,7 @@ body {
     width: 100%;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     position: fixed;
     top: 0;
@@ -44,11 +44,13 @@ body {
     width: 85px;
     height: 85px;
     border-radius: 50%;
+    margin-right: 20px;
 }
 
 .button-container {
     display: flex;
     gap: 15px; /* Space between buttons */
+    margin-left: auto;
 }
 
 /* Title Container */
@@ -201,24 +203,24 @@ h1 {
 /* Specific Positioning for Rectangles */
 .dropshipping-rectangle {
     top: 0px;
-    left: 0px; /* Centered for desktop */
+    left: -90px;
     background: linear-gradient(to right, #ee73ee, #0033ff); /* Gradient by default */
 }
 
 .ai-rectangle {
     top: 450px; /* Position below the pricing boxes and ad */
-    left: 0px; /* Centered for desktop */
+    left: -90px;
 }
 
 .smma-rectangle {
     top: 0px;
-    left: 1050px; /* Adjusted to ensure centering */
+    left: 1040px;
     background: linear-gradient(to right, #ee73ee, #0033ff); /* Gradient by default */
 }
 
 .mindset-rectangle {
     top: 450px; /* Position below the pricing boxes and ad */
-    left: 1050px; /* Adjusted to ensure centering */
+    left: 1040px;
 }
 
 /* Title Text Styling Inside Rectangles */
@@ -341,32 +343,32 @@ h1 {
     /* Adjusting Rectangles */
     .dropshipping-rectangle {
         top: 0px;
-        left: calc(50% - 125px); /* Centered for desktop */
+        left: -90px; /* Adjust to fit the screen properly */
         width: 250px;
         position: absolute;
     }
     .ai-rectangle {
         top: 450px; /* Align with dropshipping-rectangle */
-        left: calc(50% - 125px); /* Centered for desktop */
+        left: -90px; /* Adjust horizontal position */
         width: 250px;
         position: absolute;
     }
     .smma-rectangle {
         top: 0px;
-        left: calc(50% + 500px - 125px); /* Adjusted to ensure centering */
+        left: 1040px; /* Bring inside viewport */
         width: 250px;
         position: absolute;
     }
     .mindset-rectangle {
-        top: 450px; /* Align with other rectangles */
-        left: calc(50% + 500px - 125px); /* Adjusted to ensure centering */
+        top: 450px; /* Adjust vertical position */
+        left: 1040px; /* Bring inside viewport */
         width: 250px;
         position: absolute;
     }
 
     /* Adjusting Button Styles */
     .button {
-        display: inline-block; /* Ensure buttons are in line */
+        position: relative;
     }
 }
 
@@ -409,5 +411,34 @@ h1 {
         max-width: 300px;
         height: auto;
         text-align: center;
+    }
+
+    /* Title Container */
+    .title-container {
+        margin: 60px auto 15px;
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    /* Main Content */
+    .text-content {
+        margin: 15px auto;
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    /* Price Box Container */
+    .price-box-container {
+        flex-direction: column;
+        gap: 15px;
+        max-width: 90%;
+    }
+
+    .price-box {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        padding: 10px;
+        font-size: 0.9em;
     }
 }
